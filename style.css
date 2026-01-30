@@ -52,7 +52,7 @@ h1 {
     text-align: center;
 }
 
-.tarjeta h3 { color: #1a2a3a; font-size: 1.5rem; margin-top: 0; }
+.tarjeta h3 { color: #1a2a3a; font-size: 1.4rem; margin-top: 0; margin-bottom: 10px; }
 strong { color: #1a2a3a; font-weight: 700; }
 
 .btn-youtube {
@@ -75,7 +75,7 @@ strong { color: #1a2a3a; font-weight: 700; }
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
     transition: transform 0.3s;
     width: 90%;
