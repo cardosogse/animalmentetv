@@ -1,44 +1,102 @@
-/* --- ESTILO PROFESIONAL ANIMALMENTETV --- */
+/* --- CONFIGURACIÓN BASE --- */
 body {
     font-family: 'Outfit', sans-serif;
     margin: 0;
+    padding: 0;
     background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
 }
 
-/* Header y Footer unificados con tu azul marino profesional */
-header, footer {
-    background-color: #1a2a3a; 
+/* --- ENCABEZADO (AZUL MARINO UNIFICADO) --- */
+header {
+    background-color: #1a2a3a; /* Azul marino de tu logo */
     color: white;
     text-align: center;
     padding: 60px 20px;
 }
 
-.logo-superior {
-    width: 120px;
+/* AQUÍ ARREGLAMOS EL LOGO GIGANTE */
+.logo-principal {
+    width: 140px; /* Tamaño profesional controlado */
+    height: 140px;
     border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.1);
-    margin-bottom: 15px;
+    border: 4px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
-/* Tipografía de impacto para el nombre de tu marca */
 h1 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', sans-serif; /* Letra imponente */
     font-size: 4.5rem;
     margin: 0;
     letter-spacing: 2px;
+    line-height: 1;
 }
 
-.subtitulo { color: #94a3b8; font-style: italic; margin-top: 5px; }
-.profesion { font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+.subtitulo {
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+}
 
-/* Botón de WhatsApp Verde */
-.btn-contacto {
+.tagline {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* --- SECCIÓN DE SERVICIOS --- */
+.servicios {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    border-top: 6px solid #27ae60; /* Verde biológico */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.tarjeta h3 { margin-top: 0; color: #1a2a3a; }
+
+/* --- SECCIÓN CONTACTO Y BOTÓN WHATSAPP --- */
+.contacto {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.btn-whatsapp {
     display: inline-block;
-    background-color: #25d366;
+    background-color: #25d366; /* Verde oficial WhatsApp */
     color: white;
-    padding: 15px 35px;
+    padding: 18px 35px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    font-size: 1.1rem;
     margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+    transition: transform 0.2s;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+/* --- PIE DE PÁGINA (IDÉNTICO AL HEADER) --- */
+footer {
+    background-color: #1a2a3a;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.85rem;
 }
