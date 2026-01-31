@@ -7,18 +7,17 @@ body {
     background-color: #f8fafc;
     color: #1e293b;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 header, footer {
     background-color: #1a2a3a;
     color: white;
     text-align: center;
-    padding: clamp(35px, 8vw, 60px) 15px;
+    padding: 40px 15px;
 }
 
 .logo-principal {
-    width: clamp(100px, 25vw, 135px);
+    width: 120px;
     height: auto;
     border-radius: 50%;
     border: 3px solid rgba(255,255,255,0.2);
@@ -27,14 +26,13 @@ header, footer {
 
 h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.3rem, 10vw, 4.2rem); 
+    font-size: 3rem; 
     margin: 0;
     letter-spacing: 1.5px;
-    line-height: 1;
 }
 
-.subtitulo { font-size: 1.1rem; color: #94a3b8; font-style: italic; margin-top: 8px; }
-.tagline { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-top: 12px; display: block; letter-spacing: 1px; }
+.subtitulo { font-size: 1.1rem; color: #94a3b8; font-style: italic; }
+.tagline { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-top: 10px; display: block; }
 
 .servicios {
     padding: 30px 15px;
@@ -45,43 +43,41 @@ h1 {
 .tarjeta {
     background: white;
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: 30px;
     margin-bottom: 20px;
     border-top: 6px solid #27ae60;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     text-align: center;
 }
 
-.tarjeta h3 { color: #1a2a3a; font-size: 1.4rem; margin-top: 0; }
-strong { color: #1a2a3a; font-weight: 700; }
-
-.btn-youtube {
+.btn-youtube, .btn-historias, .btn-radiante {
     display: inline-block;
-    background-color: #FF0000;
-    color: white;
-    padding: 12px 24px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     margin-top: 15px;
 }
 
+.btn-youtube { background: #FF0000; color: white; padding: 12px 24px; }
+.btn-historias { background: #3498db; color: white; padding: 12px 24px; }
+
 .btn-radiante {
-    display: inline-block;
     background-color: #00e676;
     color: white;
     padding: 20px 35px;
-    text-decoration: none;
     border-radius: 50px;
-    font-weight: bold;
     font-size: 1.2rem;
     box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
     transition: transform 0.3s;
-    width: 90%;
-    max-width: 320px;
 }
 
-.btn-radiante:hover { transform: translateY(-3px) scale(1.03); }
+.btn-radiante:hover { transform: translateY(-3px); }
 
 .contacto { padding: 60px 20px; text-align: center; background: white; }
-footer p { font-size: 0.85rem; margin: 6px 0; opacity: 0.9; }
+
+/* Estilos específicos del Blog */
+.header-blog { background: #1a2a3a; padding: 30px; }
+.btn-volver { color: #00e676; text-decoration: none; font-weight: bold; }
+.contenedor-articulo { max-width: 750px; margin: 40px auto; padding: 20px; }
+.post { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.fecha { color: #94a3b8; font-size: 0.8rem; letter-spacing: 1px; }
