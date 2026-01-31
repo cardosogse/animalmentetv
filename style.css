@@ -1,23 +1,33 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; overflow-x: hidden; }
+body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; line-height: 1.6; }
 
-/* --- HEADER Y LOGO --- */
-.main-header, .header-blog { background: #1a2a3a; color: white; text-align: center; padding: 40px 20px; position: relative; }
-.logo-text { font-size: 2.6rem; letter-spacing: -0.5px; text-transform: lowercase; margin-bottom: 5px; }
-.animal { color: #2ecc71; font-weight: 700; } 
+/* --- HEADER --- */
+.main-header, .header-blog { background: #1a2a3a; color: white; text-align: center; padding: 50px 20px; position: relative; }
+.logo-img { display: block; margin: 0 auto 15px; width: 75px !important; border-radius: 50%; border: 2px solid #2ecc71; }
+.logo-text { font-size: 2.8rem; letter-spacing: -1px; text-transform: lowercase; margin-bottom: 5px; }
+.animal { color: #2ecc71; font-weight: 700; }
 .mente { color: #ffffff; font-weight: 400; }
 .tv { color: #3498db; font-weight: 300; font-style: italic; }
-.logo-img { display: block; margin: 0 auto 10px; width: 75px !important; border-radius: 50%; border: 2px solid #2ecc71; }
-.tagline { color: #2ecc71; font-weight: bold; font-size: 0.65rem; margin-top: 5px; text-transform: uppercase; }
+.tagline { color: #2ecc71; font-weight: bold; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
 
-/* --- NAVEGACIÓN --- */
-.nav-blog { position: absolute; left: 10px; top: 10px; }
-.btn-atras { background: #f59e0b; color: #1a2a3a !important; padding: 8px 12px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+/* --- CONTENEDORES --- */
+.contenedor-principal, .lectura { 
+    width: 95%; 
+    max-width: 500px; /* Base para celular */
+    margin: 30px auto; 
+}
 
-/* --- GRID Y TARJETAS --- */
-.grid-servicios, .lectura { max-width: 450px; margin: 20px auto; padding: 0 15px; }
-.card, .post-completo { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-.card { text-align: center; }
+/* --- GRID DE SERVICIOS (Móvil por defecto) --- */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 20px;
+}
+
+/* --- TARJETAS --- */
+.card, .post-completo { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.card { text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+.card h3 { margin-bottom: 15px; color: #1a2a3a; font-size: 1.3rem; }
 
 .card-lagomorfos { border-top: 8px solid #27ae60; }
 .card-bioterio { border-top: 8px solid #16a085; }
@@ -28,22 +38,52 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; o
 
 /* --- RECONOCIMIENTOS --- */
 .card-reconocimiento { 
-    background: #1a2a3a; color: white; border-radius: 12px; padding: 25px; margin: 30px 0; border-left: 8px solid #2ecc71; text-align: left;
+    background: #1a2a3a; color: white; border-radius: 15px; padding: 30px; margin: 40px 0; border-left: 10px solid #2ecc71; 
 }
-.card-reconocimiento h4 { color: #2ecc71; margin-bottom: 5px; font-size: 0.9rem; text-transform: uppercase; }
-.fecha-correo { display: block; font-size: 0.75rem; color: #94a3b8; margin-bottom: 15px; font-weight: bold; }
-.cita-profesional { font-style: italic; font-size: 1rem; line-height: 1.6; }
-.cita-profesional cite { display: block; margin-top: 15px; font-weight: bold; color: #2ecc71; font-style: normal; font-size: 0.8rem; }
+.card-reconocimiento h4 { color: #2ecc71; font-size: 1rem; margin-bottom: 10px; text-transform: uppercase; }
+.fecha-correo { display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 20px; font-weight: bold; }
+.cita-profesional { font-style: italic; font-size: 1.1rem; border: none; padding: 0; }
+.cita-profesional cite { display: block; margin-top: 20px; font-weight: bold; color: #2ecc71; font-style: normal; font-size: 0.9rem; }
 
 /* --- TEXTO JUSTIFICADO --- */
-.texto-justificado { text-align: justify !important; text-justify: inter-word; line-height: 1.7; color: #334155; font-size: 1.05rem; }
-.firma { border-left: 3px solid #f59e0b; padding-left: 10px; color: #64748b; margin: 15px 0; }
-.meta { font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 5px; }
+.texto-justificado { text-align: justify !important; text-justify: inter-word; }
 
-/* --- BOTONES Y FOOTER --- */
-.flex-btn { display: flex; justify-content: center; width: 100%; }
-.btn { display: inline-block; width: 100%; max-width: 240px; padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; margin-top: 15px; text-align: center; }
+/* --- BOTONES --- */
+.flex-btn { margin-top: auto; padding-top: 20px; }
+.btn { display: inline-block; width: 100%; padding: 12px; border-radius: 10px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; }
 .btn-azul { background: #3498db; }
 .btn-yt { background: #c0392b; }
-.btn-wa { display: block; width: 100%; max-width: 300px; margin: 20px auto; background: #00e676; color: #1a2a3a; padding: 18px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1rem; text-align: center; }
-footer { text-align: center; padding: 30px; font-size: 0.75rem; color: #94a3b8; background: #1a2a3a; }
+.btn-wa { display: block; width: 100%; max-width: 350px; margin: 40px auto; background: #00e676; color: #1a2a3a; padding: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; text-align: center; box-shadow: 0 10px 20px rgba(0, 230, 118, 0.2); }
+
+/* --- BITÁCORA ESPECÍFICO --- */
+.bg-blog { background: #f8fafc; }
+.nav-blog { position: absolute; left: 20px; top: 20px; }
+.btn-atras { background: #f59e0b; color: #1a2a3a !important; padding: 10px 18px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.meta { color: #94a3b8; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; display: block; }
+.firma { border-left: 4px solid #f59e0b; padding-left: 15px; margin: 25px 0; color: #64748b; font-style: italic; }
+
+footer { background: #1a2a3a; color: #94a3b8; text-align: center; padding: 40px 20px; font-size: 0.8rem; }
+
+/* ==========================================
+   OPTIMIZACIÓN PARA COMPUTADORA (DESKTOP)
+   ========================================== */
+@media (min-width: 768px) {
+    .contenedor-principal {
+        max-width: 1100px; /* Ancho amplio para PC */
+    }
+    
+    .grid-servicios {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+        gap: 30px;
+    }
+
+    .card-reconocimiento {
+        padding: 50px;
+    }
+
+    .logo-text { font-size: 4rem; }
+    
+    .lectura {
+        max-width: 800px; /* Bitácora más ancha en PC */
+    }
+}
