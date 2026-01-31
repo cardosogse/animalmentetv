@@ -11,18 +11,10 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; l
 .tagline { color: #2ecc71; font-weight: bold; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
 
 /* --- CONTENEDORES --- */
-.contenedor-principal, .lectura { 
-    width: 95%; 
-    max-width: 500px; /* Base para celular */
-    margin: 30px auto; 
-}
+.contenedor-principal, .lectura { width: 95%; max-width: 500px; margin: 30px auto; }
 
-/* --- GRID DE SERVICIOS (Móvil por defecto) --- */
-.grid-servicios {
-    display: grid;
-    grid-template-columns: 1fr; /* Una columna en móvil */
-    gap: 20px;
-}
+/* --- GRID --- */
+.grid-servicios { display: grid; grid-template-columns: 1fr; gap: 20px; }
 
 /* --- TARJETAS --- */
 .card, .post-completo { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
@@ -34,6 +26,44 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; l
 .card-etologia { border-top: 8px solid #1b5e20; }
 .card-cursos { border-top: 8px solid #f39c12; }
 .card-azul { border-top: 8px solid #3498db; }
+.card-roja { border-top: 8px solid #c0392b; }
+
+/* --- RECONOCIMIENTOS --- */
+.card-reconocimiento { 
+    background: #1a2a3a; color: white; border-radius: 15px; padding: 30px; margin: 40px 0; border-left: 10px solid #2ecc71; text-align: left;
+}
+.card-reconocimiento h4 { color: #2ecc71; font-size: 1rem; margin-bottom: 10px; text-transform: uppercase; }
+.fecha-correo { display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 20px; font-weight: bold; }
+.cita-profesional { font-style: italic; font-size: 1rem; line-height: 1.6; }
+.cita-profesional cite { display: block; margin-top: 20px; font-weight: bold; color: #2ecc71; font-style: normal; font-size: 0.9rem; }
+
+/* --- TEXTO JUSTIFICADO --- */
+.texto-justificado { text-align: justify !important; text-justify: inter-word; }
+
+/* --- BOTONES --- */
+.flex-btn { margin-top: auto; padding-top: 20px; }
+.btn { display: inline-block; width: 100%; padding: 12px; border-radius: 10px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; text-align: center; }
+.btn-azul { background: #3498db; }
+.btn-yt { background: #c0392b; }
+.btn-wa { display: block; width: 100%; max-width: 350px; margin: 40px auto; background: #00e676; color: #1a2a3a; padding: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; text-align: center; box-shadow: 0 10px 20px rgba(0, 230, 118, 0.2); }
+
+/* --- BITÁCORA --- */
+.bg-blog { background: #f8fafc; }
+.nav-blog { position: absolute; left: 20px; top: 20px; }
+.btn-atras { background: #f59e0b; color: #1a2a3a !important; padding: 10px 18px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.meta { color: #94a3b8; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; display: block; }
+.firma { border-left: 4px solid #f59e0b; padding-left: 15px; margin: 25px 0; color: #64748b; font-style: italic; }
+
+footer { background: #1a2a3a; color: #94a3b8; text-align: center; padding: 40px 20px; font-size: 0.8rem; }
+
+/* PC RESPONSIVE */
+@media (min-width: 768px) {
+    .contenedor-principal { max-width: 1100px; }
+    .grid-servicios { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .card-reconocimiento { padding: 50px; }
+    .logo-text { font-size: 4rem; }
+    .lectura { max-width: 800px; }
+}
 .card-roja { border-top: 8px solid #c0392b; }
 
 /* --- RECONOCIMIENTOS --- */
