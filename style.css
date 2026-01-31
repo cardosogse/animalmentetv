@@ -1,83 +1,55 @@
-* { box-sizing: border-box; }
+/* --- NUEVOS ESTILOS PARA BOTONES Y BLOG --- */
 
-body {
-    font-family: 'Outfit', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
-}
-
-header, footer {
-    background-color: #1a2a3a;
-    color: white;
-    text-align: center;
-    padding: 40px 15px;
-}
-
-.logo-principal {
-    width: 120px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.2);
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem; 
-    margin: 0;
-    letter-spacing: 1.5px;
-}
-
-.subtitulo { font-size: 1.1rem; color: #94a3b8; font-style: italic; }
-.tagline { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-top: 10px; display: block; }
-
-.servicios {
-    padding: 30px 15px;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.tarjeta {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-top: 6px solid #27ae60;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    text-align: center;
-}
-
-.btn-youtube, .btn-historias, .btn-radiante {
+/* Botón en el Portal Principal */
+.btn-blog {
     display: inline-block;
+    background-color: #2c3e50; /* Azul Oxford Profesional */
+    color: white;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     margin-top: 15px;
+    transition: 0.3s;
+}
+.btn-blog:hover { background-color: #1a252f; transform: scale(1.05); }
+
+/* Header del Blog */
+.header-blog {
+    background-color: #2c3e50;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.btn-youtube { background: #FF0000; color: white; padding: 12px 24px; }
-.btn-historias { background: #3498db; color: white; padding: 12px 24px; }
+.contenedor-nav {
+    max-width: 750px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+}
 
-.btn-radiante {
-    background-color: #00e676;
-    color: white;
-    padding: 20px 35px;
+/* Botón Regresar (Contraste Elegante) */
+.btn-regresar {
+    background-color: #f59e0b; /* Ámbar/Oro para contraste */
+    color: #1a2a3a;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 50px;
-    font-size: 1.2rem;
-    box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
-    transition: transform 0.3s;
+    font-weight: bold;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 
-.btn-radiante:hover { transform: translateY(-3px); }
+.btn-regresar:hover { background-color: #d97706; color: white; }
 
-.contacto { padding: 60px 20px; text-align: center; background: white; }
+/* Estilo del Autor */
+.autor {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    border-left: 3px solid #f59e0b;
+    padding-left: 10px;
+}
 
-/* Estilos específicos del Blog */
-.header-blog { background: #1a2a3a; padding: 30px; }
-.btn-volver { color: #00e676; text-decoration: none; font-weight: bold; }
-.contenedor-articulo { max-width: 750px; margin: 40px auto; padding: 20px; }
-.post { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.fecha { color: #94a3b8; font-size: 0.8rem; letter-spacing: 1px; }
+.body-lectura { background-color: #f1f5f9; }
+.post h2 { color: #1a2a3a; line-height: 1.2; margin-bottom: 5px; }
+.contenido-texto p { margin-bottom: 20px; font-size: 1.1rem; color: #334155; }
