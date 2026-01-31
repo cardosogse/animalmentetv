@@ -1,7 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; overflow-x: hidden; }
 
-/* --- LOGO BIO-TECH REFINADO --- */
 .main-header, .header-blog { background: #1a2a3a; color: white; text-align: center; padding: 40px 20px; position: relative; }
 .logo-text { font-size: 2.6rem; letter-spacing: -0.5px; text-transform: lowercase; margin-bottom: 5px; }
 .animal { color: #2ecc71; font-weight: 700; } 
@@ -9,10 +8,10 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; o
 .tv { color: #3498db; font-weight: 300; font-style: italic; }
 .logo-img { display: block; margin: 0 auto 10px; width: 75px !important; border-radius: 50%; border: 2px solid #2ecc71; }
 .tagline { color: #2ecc71; font-weight: bold; font-size: 0.65rem; margin-top: 5px; text-transform: uppercase; }
+.subseccion-tag { color: #3498db; font-size: 0.85rem; font-weight: bold; margin-top: 5px; letter-spacing: 1px; }
 
-/* --- GRID Y TARJETAS --- */
-.grid-servicios { max-width: 450px; margin: 20px auto; padding: 0 15px; }
-.card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; }
+.grid-servicios, .lectura { max-width: 450px; margin: 20px auto; padding: 0 15px; }
+.card, .post-completo { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; }
 
 .card-lagomorfos { border-top: 8px solid #27ae60; }
 .card-bioterio { border-top: 8px solid #16a085; }
@@ -21,7 +20,6 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; o
 .card-azul { border-top: 8px solid #3498db; }
 .card-roja { border-top: 8px solid #c0392b; }
 
-/* --- SECCIÓN RECONOCIMIENTO (ESTILO CITA) --- */
 .card-reconocimiento { 
     background: #1a2a3a; 
     color: white; 
@@ -29,15 +27,14 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; o
     padding: 30px; 
     margin: 30px 0; 
     border-left: 8px solid #2ecc71;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    text-align: left;
 }
-.cita-profesional { font-style: italic; font-size: 1.1rem; line-height: 1.6; }
-.cita-profesional cite { display: block; margin-top: 15px; font-weight: bold; color: #2ecc71; font-style: normal; font-size: 0.9rem; }
+.cita-profesional { font-style: italic; font-size: 1.05rem; line-height: 1.6; }
+.cita-profesional cite { display: block; margin-top: 15px; font-weight: bold; color: #2ecc71; font-style: normal; font-size: 0.85rem; }
 
-/* --- BOTONES Y FOOTER --- */
 .flex-btn { display: flex; justify-content: center; width: 100%; }
 .btn { display: inline-block; width: 100%; max-width: 240px; padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; margin-top: 15px; text-align: center; }
 .btn-azul { background: #3498db; }
-.btn-yt { background: #c0392b; font-family: 'Roboto', sans-serif; }
+.btn-yt { background: #c0392b; }
 .btn-wa { display: block; width: 100%; max-width: 300px; margin: 20px auto; background: #00e676; color: #1a2a3a; padding: 18px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1rem; text-align: center; }
 footer { text-align: center; padding: 30px; font-size: 0.75rem; color: #94a3b8; background: #1a2a3a; }
