@@ -11,17 +11,17 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; d
 /* --- HEADER PRINCIPAL --- */
 .main-header { background: #1a2a3a; color: white; text-align: center; padding: 50px 20px; }
 
-/* --- SOLUCIÓN ERROR AMONTONAMIENTO (MÓVIL) --- */
+/* --- HEADER BLOG (CORRECCIÓN BOTÓN AMONTONADO) --- */
 .header-blog { background: #1a2a3a; color: white; padding: 20px; }
 .header-flex-container { 
     display: flex; 
-    flex-direction: column; /* Apila elementos para evitar choque */
+    flex-direction: column; 
     align-items: center; 
-    gap: 20px;
+    gap: 20px; /* Evita que el botón choque con el logo */
 }
-.container-boton { width: 100%; text-align: left; } /* Mantiene el botón a la izquierda */
+.container-boton { width: 100%; text-align: left; }
 
-/* --- DISEÑO DE LOGO Y TAGLINES --- */
+/* --- LOGO Y TÍTULOS --- */
 .logo-img { display: block; margin: 0 auto 10px; width: 70px !important; border-radius: 50%; border: 2px solid #2ecc71; }
 .logo-text { font-size: 2.5rem; letter-spacing: -1px; text-transform: lowercase; }
 .animal { color: #2ecc71; font-weight: 700; }
@@ -32,76 +32,61 @@ body { font-family: 'Outfit', sans-serif; background: #f0f2f5; color: #1c1e21; d
 .sub-tagline { color: #94a3b8; font-size: 0.65rem; letter-spacing: 1px; margin-top: 5px; font-weight: bold; }
 .subseccion-tag { color: #3498db; font-size: 0.8rem; font-weight: bold; margin-top: 5px; text-transform: uppercase; }
 
-/* --- BOTONES --- */
-.btn-atras { 
-    background: #f59e0b; 
-    color: #1a2a3a !important; 
-    padding: 8px 20px; 
-    border-radius: 8px; 
-    font-weight: bold; 
-    text-decoration: none;
-    font-size: 0.85rem;
-    display: inline-block;
-}
-
-/* --- CONTENIDOS --- */
+/* --- TARJETAS Y ALINEACIÓN DE BOTONES (MODO PC) --- */
 .contenedor-principal, .lectura { width: 95%; max-width: 500px; margin: 20px auto; }
 .grid-servicios { display: grid; grid-template-columns: 1fr; gap: 20px; }
-.card, .post-completo { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-.texto-justificado { text-align: justify !important; text-justify: inter-word; }
 
-/* COLORES DE TARJETAS */
+.card { 
+    background: white; 
+    border-radius: 15px; 
+    padding: 25px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+    display: flex; 
+    flex-direction: column; /* Fundamental para la alineación */
+}
+
+.card h3 { margin-bottom: 15px; color: #1a2a3a; font-size: 1.3rem; text-align: center; }
+
+/* ESTE ES EL SECRETO: Empuja el botón al fondo de la tarjeta */
+.flex-btn { 
+    margin-top: auto; 
+    padding-top: 20px; 
+}
+
+/* --- BOTONES --- */
+.btn { display: inline-block; width: 100%; padding: 12px; border-radius: 10px; text-decoration: none; color: white; font-weight: bold; text-align: center; }
+.btn-atras { background: #f59e0b; color: #1a2a3a !important; padding: 8px 20px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; }
+.btn-azul { background: #3498db; }
+.btn-yt { background: #c0392b; }
+.btn-wa { display: block; width: 100%; max-width: 350px; margin: 40px auto; background: #00e676; color: #1a2a3a; padding: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; text-align: center; }
+
+/* COLORES DE BORDES */
+.card-lagomorfos { border-top: 8px solid #27ae60; }
+.card-bioterio { border-top: 8px solid #16a085; }
+.card-etologia { border-top: 8px solid #1b5e20; }
+.card-cursos { border-top: 8px solid #f39c12; }
 .card-azul { border-top: 8px solid #3498db; }
 .card-roja { border-top: 8px solid #c0392b; }
 
-/* --- ESQUEMA TÉCNICO --- */
-.capsula-ciencia { margin-top: 30px; padding: 20px; background: #f1f5f9; border-radius: 12px; border: 1px dashed #3498db; }
-.esquema-comparativo { display: flex; align-items: center; justify-content: space-around; margin-top: 15px; }
-.bloque-farmaco { padding: 10px; border-radius: 8px; text-align: center; border: 2px solid #ccc; flex: 1; margin: 0 5px; }
-.pento { background: #e0f2fe; border-color: #3498db; }
-.freca { background: #fef2f2; border-color: #ef4444; }
-.flecha { font-size: 1.2rem; font-weight: bold; }
-.abajo { color: #3498db; }
-.arriba { color: #ef4444; }
+.texto-justificado { text-align: justify !important; text-justify: inter-word; }
 
 /* --- FOOTER --- */
 .main-footer { background: #1a2a3a; color: #94a3b8; text-align: center; padding: 30px 20px; font-size: 0.7rem; }
 .main-footer a { color: #2ecc71; text-decoration: none; }
 
-/* --- MEDIA QUERIES (PC) --- */
+/* --- OPTIMIZACIÓN PC (MATEMÁTICAMENTE ARMONIOSO) --- */
 @media (min-width: 768px) {
     .header-flex-container { flex-direction: row; justify-content: space-between; padding: 0 50px; }
     .container-boton { width: auto; }
     .titulo-centrado { text-align: right; }
     .contenedor-principal { max-width: 1100px; }
+    
+    /* En PC, las tarjetas de la misma fila tendrán la misma altura automáticamente */
     .grid-servicios { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    
     .lectura { max-width: 850px; }
+    .tagline { font-size: 1.1rem; letter-spacing: 3px; }
 }
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 1.1rem; 
-    text-align: center; 
-    box-shadow: 0 10px 20px rgba(0, 230, 118, 0.2); 
-}
-
-/* --- NAVEGACIÓN BITÁCORA --- */
-.bg-blog { background: #f8fafc; }
-.nav-blog { position: absolute; left: 20px; top: 20px; }
-.btn-atras { 
-    background: #f59e0b; 
-    color: #1a2a3a !important; 
-    padding: 10px 18px; 
-    text-decoration: none; 
-    border-radius: 8px; 
-    font-weight: bold; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-}
-.firma { border-left: 4px solid #f59e0b; padding-left: 15px; margin: 25px 0; color: #64748b; font-style: italic; }
-.meta { color: #94a3b8; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; display: block; }
-
-/* ==========================================
-   FOOTER CON BLINDAJE LEGAL
    ========================================== */
 .main-footer { 
     flex-shrink: 0; 
