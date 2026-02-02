@@ -1,5 +1,6 @@
 /* ==========================================
-   CSS MASTER – AnimalMenteTV
+   CSS MASTER v64.0 – AnimalMenteTV
+   Prioridad: Identidad Profesional & Rigor Técnico
    ========================================== */
 
 * {
@@ -8,8 +9,8 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,12 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.6;
-}
-
-.site-container {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .content-wrap {
@@ -32,76 +28,171 @@ body {
 }
 
 .text-justify {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: justify !important;
+    text-justify: inter-word !important;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER: Arquitectura de Marca Personal ===== */
 
 .main-header {
     background: #1a2a3a;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .logo-img {
-    width: 75px;
-    margin-bottom: 15px;
+    width: 80px;
+    margin-bottom: 25px;
     border-radius: 50%;
     border: 2px solid #2ecc71;
+    transition: 0.3s;
 }
 
+/* Nombre del autor como jerarquía principal */
+.nombre-autor {
+    font-size: 2.2rem;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+.sub-tagline-credenciales {
+    color: #2ecc71;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Marca AnimalMenteTV como respaldo */
 .logo-text {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     letter-spacing: -1px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: inline-block;
 }
 
-.animal { color: #2ecc71; font-weight: 700; }
+.animal { color: #ffffff; font-weight: 700; }
 .mente  { color: #ffffff; font-weight: 400; }
 .tv     { color: #3498db; font-weight: 300; font-style: italic; }
 
 .tagline {
-    margin-top: 15px;
-    color: #2ecc71;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-
-.sub-tagline {
-    margin-top: 10px;
-    font-size: 0.95rem;
-}
-
-.sub-tagline-credenciales {
     margin-top: 5px;
-    font-size: 0.75rem;
     color: #94a3b8;
-    font-weight: bold;
+    font-size: 0.95rem;
+    font-weight: 300;
 }
 
-/* ===== GRID ===== */
+/* ===== CONTENEDORES Y GRIDS ===== */
 
 .contenedor-principal {
     width: 95%;
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 
 .grid-servicios {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr; /* Móvil primero */
+    gap: 25px;
 }
+
+/* ===== TARJETAS (CARDS) ===== */
 
 .card {
     background: white;
     border-radius: 15px;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
+    border-top: 8px solid #ccc;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card-lagomorfos { border-top-color: #27ae60; }
+.card-bioterio   { border-top-color: #16a085; }
+.card-etologia   { border-top-color: #1b5e20; }
+.card-cursos     { border-top-color: #f39c12; }
+.card-azul       { border-top-color: #3498db; }
+.card-roja       { border-top-color: #c0392b; }
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #1a2a3a;
+    text-align: center;
+}
+
+/* ===== RECONOCIMIENTO (Prueba Social) ===== */
+
+.card-reconocimiento {
+    background: #1a2a3a;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    border-left: 10px solid #2ecc71;
+    margin-top: 50px;
+}
+
+.card-reconocimiento h4 {
+    color: #2ecc71;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fecha-correo {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.cita-profesional {
+    font-style: italic;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.cita-profesional cite {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #2ecc71;
+    font-style: normal;
+}
+
+/* ===== BOTONES ===== */
+
+.flex-btn {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-azul { background: #3498db; }
+.btn-yt { background: #c0392b; }
+
+.btn-wa {
+    display: block;
+    max-width: 30
     border-top: 8px solid #ccc;
 }
 
