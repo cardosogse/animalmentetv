@@ -1,23 +1,18 @@
 /* ==========================================
-   CSS COSMOS v7.0 – EDICIÓN DEFINITIVA
+   CSS COSMOS v7.1 – EDICIÓN DE ORO
    ========================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
 .content-wrap { flex: 1; }
 .text-justify { text-align: justify !important; text-justify: inter-word !important; }
 
-/* --- ANIMACIÓN RADIANTE PARA EL TEXTO "ANIMAL" --- */
+/* --- ANIMACIÓN RADIANTE PARA "ANIMAL" --- */
 @keyframes text-glow {
     0% { text-shadow: 0 0 5px rgba(46, 204, 113, 0.4); }
     50% { text-shadow: 0 0 15px rgba(46, 204, 113, 0.9), 0 0 25px rgba(46, 204, 113, 0.4); }
     100% { text-shadow: 0 0 5px rgba(46, 204, 113, 0.4); }
 }
-
-.animal { 
-    color: #2ecc71; 
-    font-weight: 700; 
-    animation: text-glow 2.5s infinite ease-in-out; 
-}
+.animal { color: #2ecc71; font-weight: 700; animation: text-glow 2.5s infinite ease-in-out; }
 
 /* --- HEADERS --- */
 .main-header { background: #1a2a3a; color: white; text-align: center; padding: 50px 20px; border-bottom: 5px solid #2ecc71; }
@@ -30,12 +25,12 @@ body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; l
 .tv { color: #3498db; font-weight: 300; font-style: italic; }
 .tagline { margin-top: 8px; color: #2ecc71; font-weight: bold; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 
-/* --- ENCABEZADO SUBPÁGINAS (SIMETRÍA TOTAL) --- */
+/* --- ENCABEZADO SUBPÁGINAS (SIN AMONTONAR) --- */
 .header-sub { 
     background: #1a2a3a; 
     padding: 15px 20px; 
     display: grid; 
-    grid-template-columns: 1fr auto 1fr; /* Logo siempre al centro, botón a la izq */
+    grid-template-columns: 1fr auto 1fr; /* Centrado matemático */
     align-items: center; 
     border-bottom: 3px solid #2ecc71; 
 }
@@ -58,7 +53,7 @@ body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; l
 .grid-servicios { display: grid; grid-template-columns: 1fr; gap: 20px; }
 @media (min-width: 768px) { .grid-servicios { grid-template-columns: repeat(3, 1fr); } }
 
-.card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; border-top: 8px solid #cbd5e1; transition: 0.3s; height: 100%; }
+.card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; border-top: 8px solid #cbd5e1; height: 100%; transition: 0.3s; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(46, 204, 113, 0.15); }
 .card-lagomorfos { border-top-color: #27ae60; }
 .card-bioterio { border-top-color: #16a085; }
@@ -79,7 +74,7 @@ body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; l
 .capsula-antagonismo { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 15px; padding: 25px; margin: 35px 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 @media (min-width: 650px) { .capsula-antagonismo { flex-direction: row; justify-content: space-around; } }
 
-/* --- FOOTER FORMATO COPYRIGHT --- */
+/* --- FOOTER COPYRIGHT FULL --- */
 .main-footer { background: #1a2a3a; padding: 50px 20px; text-align: center; color: #ffffff; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.1); }
 .cc-green { color: #2ecc71; font-weight: bold; text-decoration: none; }
 .footer-line { margin-bottom: 10px; opacity: 0.9; }
