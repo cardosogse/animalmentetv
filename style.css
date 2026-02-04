@@ -1,48 +1,45 @@
 /* ==========================================
-   CSS COSMOS v15.0 – EDICIÓN UNIFICADA
+   CSS COSMOS v15.0 – BLINDAJE Y NEÓN
    ========================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
 .content-wrap { flex: 1; }
 .text-justify { text-align: justify !important; text-justify: inter-word !important; }
 
-/* --- IDENTIDAD DE MARCA --- */
+/* --- ANIMACIONES DE IDENTIDAD --- */
+@keyframes green-pulse {
+    0% { box-shadow: 0 0 0 2px #2ecc71, 0 0 5px rgba(46, 204, 113, 0.4); }
+    50% { box-shadow: 0 0 0 3px #2ecc71, 0 0 15px rgba(46, 204, 113, 0.6); }
+    100% { box-shadow: 0 0 0 2px #2ecc71, 0 0 5px rgba(46, 204, 113, 0.4); }
+}
 @keyframes text-glow {
     0% { text-shadow: 0 0 3px rgba(46, 204, 113, 0.3); }
     50% { text-shadow: 0 0 10px rgba(46, 204, 113, 0.7); }
     100% { text-shadow: 0 0 3px rgba(46, 204, 113, 0.3); }
 }
+
+/* --- CLASES DE LOGO Y MARCA --- */
 .animal-plano { color: #2ecc71; font-weight: 700; }
 .animal-radiante { color: #2ecc71; font-weight: 700; animation: text-glow 2.5s infinite ease-in-out; }
 .mente { color: #ffffff; font-weight: 400; }
-.tv { color: #3498db; font-weight: 300; font-style: italic; } /* Azul, light e italic */
+.tv { color: #3498db; font-weight: 300; font-style: italic; }
 
-/* --- ENCABEZADOS --- */
+/* --- HEADERS --- */
 .main-header { background: #1a2a3a; color: white; text-align: center; padding: 50px 20px; border-bottom: 5px solid #2ecc71; }
-.logo-img-radiante { width: 75px; border-radius: 50%; margin-bottom: 15px; box-shadow: 0 0 15px rgba(46, 204, 113, 0.5); }
+.logo-img-radiante { width: 75px; border-radius: 50%; margin-bottom: 15px; animation: green-pulse 3s infinite ease-in-out; }
 .logo-text { font-size: 2.7rem; letter-spacing: -1px; margin-top: 15px; display: inline-block; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
 
-/* --- BOTÓN REGRESAR UNIFICADO Y RADIOACTIVO --- */
+/* --- BOTÓN REGRESAR UNIFICADO Y NEÓN VERDE RADIOACTIVO --- */
 .header-sub { background: #1a2a3a; padding: 12px 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 3px solid #2ecc71; }
-.btn-regresar-minimal { 
-    color: #f39c12; 
-    text-decoration: none; 
-    font-size: 0.7rem; 
-    font-weight: 900; 
-    text-transform: uppercase; 
-    border: 1.5px solid #f39c12; 
-    padding: 6px 10px; 
-    border-radius: 4px; 
-    transition: all 0.2s ease; 
-}
+.btn-regresar-minimal { color: #f39c12; text-decoration: none; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; border: 1.5px solid #f39c12; padding: 6px 10px; border-radius: 4px; transition: all 0.2s ease; }
 .btn-regresar-minimal:active { 
-    color: #39FF14 !important; /* Verde Radioactivo */
-    border-color: #39FF14 !important;
-    box-shadow: 0 0 20px #39FF14;
-    transform: scale(0.95);
+    color: #39FF14 !important; 
+    border-color: #39FF14 !important; 
+    box-shadow: 0 0 20px #39FF14; 
+    transform: scale(0.95); 
 }
 
-/* --- GRID Y PALETA DE COLORES --- */
+/* --- GRID Y PALETA DE COLORES DE SERVICIOS --- */
 .contenedor-principal { width: 95%; max-width: 1100px; margin: 40px auto; }
 .grid-servicios { display: grid; grid-template-columns: 1fr; gap: 20px; }
 @media (min-width: 768px) { .grid-servicios { grid-template-columns: repeat(3, 1fr); } }
@@ -55,11 +52,21 @@ body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; l
 .card-azul { border-top-color: #3498db; }
 .card-roja { border-top-color: #c0392b; }
 
+/* --- BOTONES SÓLIDOS CON EFECTO NEÓN TEMÁTICO --- */
 .flex-btn { margin-top: auto; padding-top: 25px; display: flex; justify-content: center; }
-.btn-solid { width: 100%; max-width: 240px; padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; text-align: center; }
-.btn-blue { background: #3498db; }
-.btn-red { background: #c0392b; }
+.btn-solid { width: 100%; max-width: 240px; padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; text-align: center; transition: 0.2s; }
 
-/* --- FOOTER --- */
+/* Neón Azul (Explorar Bitácora) */
+.btn-blue { background: #3498db; }
+.btn-blue:active { background: #00D4FF; box-shadow: 0 0 25px #00D4FF; transform: scale(0.96); }
+
+/* Neón Rojo (YouTube) */
+.btn-red { background: #c0392b; }
+.btn-red:active { background: #FF0000; box-shadow: 0 0 25px #FF0000; transform: scale(0.96); }
+
+/* Neón Verde (WhatsApp) */
+.btn-wa { display: block; max-width: 320px; margin: 50px auto; background: #2ecc71; color: #000 !important; padding: 18px; border-radius: 50px; text-align: center; text-decoration: none; font-weight: 900; transition: 0.2s; }
+.btn-wa:active { background: #39FF14; box-shadow: 0 0 30px #39FF14; transform: scale(0.96); }
+
 .main-footer { background: #1a2a3a; padding: 50px 20px; text-align: center; color: #ffffff; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); line-height: 1.8; }
 .cc-link { color: #2ecc71; font-weight: bold; text-decoration: none; }
