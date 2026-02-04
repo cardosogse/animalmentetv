@@ -1,5 +1,5 @@
 /* ==========================================
-   CSS COSMOS v9.0 – BLINDAJE TOTAL
+   CSS COSMOS v10.0 – BLINDAJE FINAL
    ========================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
@@ -7,62 +7,50 @@ body { font-family: 'Outfit', sans-serif; background: #f4f7f6; color: #1a202c; l
 .text-justify { text-align: justify !important; text-justify: inter-word !important; }
 
 /* --- ANIMACIONES DE IDENTIDAD --- */
-@keyframes text-glow {
-    0% { text-shadow: 0 0 5px rgba(46, 204, 113, 0.4); }
-    50% { text-shadow: 0 0 15px rgba(46, 204, 113, 0.8); }
-    100% { text-shadow: 0 0 5px rgba(46, 204, 113, 0.4); }
+@keyframes green-radiance {
+    0% { box-shadow: 0 0 0 2px #2ecc71, 0 0 8px rgba(46, 204, 113, 0.4); }
+    50% { box-shadow: 0 0 0 3px #2ecc71, 0 0 18px rgba(46, 204, 113, 0.6); }
+    100% { box-shadow: 0 0 0 2px #2ecc71, 0 0 8px rgba(46, 204, 113, 0.4); }
 }
-.animal-radiante { color: #2ecc71; font-weight: 700; animation: text-glow 2.5s infinite ease-in-out; }
-.animal-plano { color: #2ecc71; font-weight: 700; }
+@keyframes text-glow {
+    0% { text-shadow: 0 0 3px rgba(46, 204, 113, 0.3); }
+    50% { text-shadow: 0 0 12px rgba(46, 204, 113, 0.8); }
+    100% { text-shadow: 0 0 3px rgba(46, 204, 113, 0.3); }
+}
 
-/* --- HEADERS --- */
-.main-header { background: #1a2a3a; color: white; text-align: center; padding: 50px 20px; border-bottom: 5px solid #2ecc71; }
-.logo-img { width: 75px; border-radius: 50%; border: 2px solid #2ecc71; margin-bottom: 15px; }
-.logo-text { font-size: 2.5rem; letter-spacing: -1px; margin-top: 15px; display: inline-block; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
+/* --- CLASES DE LOGO --- */
+.animal-plano { color: #2ecc71; font-weight: 700; }
+.animal-radiante { color: #2ecc71; font-weight: 700; animation: text-glow 2.5s infinite ease-in-out; }
 .mente { color: #ffffff; font-weight: 400; }
 .tv { color: #3498db; font-weight: 300; font-style: italic; }
 
-/* --- BOTÓN REGRESAR DISCRETO (SOLUCIÓN MÓVIL) --- */
-.header-sub { background: #1a2a3a; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #2ecc71; }
-.btn-regresar-minimal { 
-    color: #f39c12; 
-    text-decoration: none; 
-    font-size: 0.75rem; 
-    font-weight: 900; 
-    text-transform: uppercase; 
-    border: 1px solid rgba(243, 156, 18, 0.3);
-    padding: 5px 10px;
-    border-radius: 4px;
-}
+/* --- ENCABEZADOS --- */
+.main-header { background: #1a2a3a; color: white; text-align: center; padding: 50px 20px; border-bottom: 5px solid #2ecc71; }
+.logo-img-radiante { width: 75px; border-radius: 50%; margin-bottom: 15px; animation: green-radiance 3s infinite ease-in-out; }
+.logo-text { font-size: 2.7rem; letter-spacing: -1.5px; margin-top: 15px; display: inline-block; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
+.tagline { margin-top: 8px; color: #2ecc71; font-weight: bold; font-size: 1rem; text-transform: uppercase; }
+
+/* --- NAVEGACIÓN DISCRETA --- */
+.header-sub { background: #1a2a3a; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #2ecc71; }
+.btn-regresar-minimal { color: #f39c12; text-decoration: none; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; border: 1px solid rgba(243, 156, 18, 0.3); padding: 5px 10px; border-radius: 4px; transition: 0.3s; }
 .btn-regresar-minimal:hover { color: #2ecc71; border-color: #2ecc71; }
 
-/* --- GRID Y CARDS (RESTAURADOS) --- */
+/* --- MOSAICOS (3 COLUMNAS EN PC) --- */
 .contenedor-principal { width: 95%; max-width: 1100px; margin: 40px auto; }
 .grid-servicios { display: grid; grid-template-columns: 1fr; gap: 20px; }
 @media (min-width: 768px) { .grid-servicios { grid-template-columns: repeat(3, 1fr); } }
 
-.card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; border-top: 8px solid #cbd5e1; height: 100%; }
+.card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; border-top: 8px solid #cbd5e1; height: 100%; transition: 0.3s; }
 .card-azul { border-top-color: #3498db; }
 .card-roja { border-top-color: #c0392b; }
 
-/* --- BOTONES DE ACCIÓN (NUEVAMENTE SÓLIDOS) --- */
-.flex-btn { margin-top: auto; padding-top: 20px; display: flex; justify-content: center; }
-.btn-card { 
-    width: 100%; 
-    padding: 10px; 
-    border-radius: 6px; 
-    text-decoration: none; 
-    color: white; 
-    font-weight: bold; 
-    text-align: center; 
-    font-size: 0.85rem;
-}
+/* --- BOTONES DE ACCIÓN --- */
+.flex-btn { margin-top: auto; padding-top: 25px; display: flex; justify-content: center; }
+.btn-solid { width: 100%; max-width: 240px; padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; text-align: center; }
 .btn-blue { background: #3498db; }
 .btn-red { background: #c0392b; }
+.btn-wa { display: block; max-width: 320px; margin: 50px auto; background: #2ecc71; color: #000 !important; padding: 18px; border-radius: 50px; text-align: center; text-decoration: none; font-weight: 900; box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3); }
 
-/* WHATSAPP */
-.btn-wa { display: block; max-width: 320px; margin: 50px auto; background: #2ecc71; color: #000 !important; padding: 18px; border-radius: 50px; text-align: center; text-decoration: none; font-weight: 900; box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3); }
-
-/* --- FOOTER COPYRIGHT (MODO IMAGEN) --- */
-.main-footer { background: #1a2a3a; padding: 40px 20px; text-align: center; color: #ffffff; font-size: 0.9rem; line-height: 1.8; }
+/* --- FOOTER COMPLETO --- */
+.main-footer { background: #1a2a3a; padding: 50px 20px; text-align: center; color: #ffffff; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); line-height: 1.8; }
 .cc-link { color: #2ecc71; font-weight: bold; text-decoration: none; }
